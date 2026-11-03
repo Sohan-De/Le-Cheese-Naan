@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-label="Schéma d'accès au Cheese Naan, 14 avenue Saint-Saëns à Béziers (non à l'échelle)" font-family="Arial, Helvetica, sans-serif">
+  <defs>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="lift" x="-30%" y="-30%" width="160%" height="170%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0 L0 0 0 40" fill="none" stroke="#f3ebdd" stroke-opacity="0.04" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- Ground -->
+  <rect width="1200" height="720" fill="#161410"/>
+  <rect width="1200" height="720" fill="url(#grid)"/>
+
+  <!-- Blocks -->
+  <g fill="#1f1c17" stroke="#3a352b" stroke-width="2">
+    <rect x="30" y="30" width="260" height="210" rx="10"/>
+    <rect x="420" y="30" width="300" height="200" rx="10"/>
+    <rect x="850" y="30" width="320" height="200" rx="10"/>
+    <rect x="30" y="480" width="260" height="210" rx="10"/>
+    <rect x="420" y="490" width="300" height="200" rx="10"/>
+    <rect x="850" y="490" width="320" height="200" rx="10"/>
+  </g>
+  <!-- Courtyard -->
+  <rect x="470" y="360" width="200" height="0" fill="none"/>
+  <rect x="60" y="60" width="200" height="150" rx="8" fill="none" stroke="#2a2620" stroke-width="2"/>
+  <rect x="880" y="60" width="260" height="150" rx="8" fill="none" stroke="#2a2620" stroke-width="2"/>
+
+  <!-- Main street: Avenue Saint-Saëns -->
+  <path d="M-10 360 L1210 340" stroke="#2c2820" stroke-width="88" fill="none"/>
+  <path d="M-10 360 L1210 340" stroke="#e7ddc9" stroke-width="2" stroke-dasharray="26 22" fill="none" opacity="0.35"/>
+  <path id="av" d="M80 392 L1120 366" fill="none"/>
+  <text font-size="21" font-weight="700" letter-spacing="8" fill="#f3ebdd" opacity="0.7">
+    <textPath href="#av" startOffset="50%" text-anchor="middle">AVENUE SAINT-SAËNS</textPath>
+  </text>
+
+  <!-- Cross streets -->
+  <path d="M1040 -10 L1040 700" stroke="#2c2820" stroke-width="54" fill="none"/>
+  <path d="M1040 -10 L1040 700" stroke="#e7ddc9" stroke-width="2" stroke-dasharray="20 18" fill="none" opacity="0.25"/>
+  <path d="M180 -10 L190 700" stroke="#2c2820" stroke-width="44" fill="none"/>
+
+  <!-- Pin with glow, on the avenue -->
+  <g transform="translate(600 300)">
+    <circle r="54" fill="#ff6a1a" opacity="0.16" filter="url(#glow)"/>
+    <circle r="32" fill="#ff6a1a" opacity="0.22"/>
+    <ellipse cx="0" cy="8" rx="20" ry="7" fill="#000" opacity="0.5"/>
+    <path d="M0 0 C-18 -20 -26 -34 -26 -52 A26 26 0 1 1 26 -52 C26 -34 18 -20 0 0 Z" fill="#ff6a1a" stroke="#f3ebdd" stroke-width="2" filter="url(#lift)"/>
+    <circle cx="0" cy="-52" r="10" fill="#161410"/>
+    <circle cx="0" cy="-52" r="4" fill="#ffd9b8"/>
+    <g transform="translate(36 -104)" filter="url(#lift)">
+      <rect width="176" height="42" rx="4" fill="#f3ebdd"/>
+      <text x="88" y="27" text-anchor="middle" font-size="18" font-weight="700" fill="#161410">Cheese Naan</text>
+    </g>
+  </g>
+
+  <!-- Compass -->
+  <g transform="translate(1124 610)">
+    <circle r="32" fill="#161410" stroke="#f3ebdd" stroke-width="2"/>
+    <path d="M0 -22 L9 6 L0 2 L-9 6 Z" fill="#ff6a1a"/>
+    <path d="M0 22 L9 -6 L0 -2 L-9 -6 Z" fill="#f3ebdd" opacity="0.5"/>
+    <text y="-42" text-anchor="middle" font-size="15" font-weight="700" fill="#f3ebdd">N</text>
+  </g>
+
+  <text x="30" y="700" font-size="15" letter-spacing="1" fill="#a8a08f">Schéma indicatif, non à l'échelle</text>
+</svg>
