@@ -13,6 +13,7 @@
   <link rel="preload" href="assets/fonts/space-grotesk-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="assets/fonts/ibm-plex-mono-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/hero.css">
 
   <script>
     document.documentElement.classList.add('js');
@@ -36,7 +37,7 @@
   <meta property="og:title" content="Cheese Naan Béziers · Naan burgers">
   <meta property="og:description" content="Carte, horaires et itinéraire du Cheese Naan, 14 avenue Saint-Saëns à Béziers.">
   <meta property="og:url" content="[URL DU SITE]">
-  <meta property="og:image" content="[URL DU SITE]/assets/img/hero-share.jpg">
+  <meta property="og:image" content="[URL DU SITE]/assets/img/hero-main.jpg">
   <meta name="twitter:card" content="summary_large_image">
 
   <script type="application/ld+json">
@@ -113,7 +114,10 @@
 
   <main id="main">
     <!-- HERO: typography only -->
-    <section class="cn-hero" id="top" aria-labelledby="hero-title">
+    <section class="cn-hero cn-hero--photo" id="top" aria-labelledby="hero-title">
+      <figure class="cn-hero__photo" aria-hidden="true">
+        <img src="assets/img/hero-main.jpg" alt="" width="1200" height="1100" fetchpriority="high">
+      </figure>
       <div class="cn-wrap cn-hero__inner">
         <p class="cn-kicker">Naan burgers · Avenue Saint-Saëns</p>
         <h1 class="cn-hero__title" id="hero-title">
